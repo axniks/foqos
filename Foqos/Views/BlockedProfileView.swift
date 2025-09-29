@@ -59,6 +59,8 @@ struct BlockedProfileView: View {
   @State private var selectedActivity = FamilyActivitySelection()
   @State private var selectedStrategy: BlockingStrategy? = nil
 
+  @FocusState private var isReminderMessageTextFieldFocused: Bool  // flag to decide whether to show or hide text field clear button
+
   private let physicalReader: PhysicalReader = PhysicalReader()
 
   private var isEditing: Bool {
